@@ -1,0 +1,27 @@
+extensions: designer.cs generated.cs
+extensions: .cs .cpp .h
+//-----------------------------------------------------------------------
+// <copyright file="%FileName%" company="ELTE">
+//     Copyright (c) ELTE All rights reserved.
+// </copyright>
+// <author>%UserName%</author>
+// <date>%CreationMonth%/%CreationDay%/%CreationYear% %CreationTime%</date>
+//-----------------------------------------------------------------------
+extensions: .aspx .ascx
+<%-- 
+-----------------------------------------------------------------------
+<copyright file="%FileName%" company="ELTE">
+    Copyright (c) ELTE All rights reserved.
+</copyright>
+<author>%UserName%</author>
+<date>%CreationMonth%/%CreationDay%/%CreationYear% %CreationTime%</date>
+-----------------------------------------------------------------------
+--%>
+extensions: .vb
+'-----------------------------------------------------------------------
+'<copyright file="%FileName%" company="ELTE">
+'    Copyright (c) ELTE All rights reserved.
+'</copyright>
+'<author>%UserName%</author>
+'<date>%CreationMonth%/%CreationDay%/%CreationYear% %CreationTime%</date>
+'-----------------------------------------------------------------------

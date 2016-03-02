@@ -1,0 +1,12 @@
+
+#ignore thumbnails created by windows
+Thumbs.db
+#Ignore files built by Visual Studio
+src/**/*.suo
+src/**/*.bak
+src/**/*.[Cc]ache
+src/**/*.csproj.user
+src/**/[Bb]in/
+src/**/[Oo]bj/
+src/packages/*/*
+src/TestResults
