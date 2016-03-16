@@ -68,5 +68,23 @@ namespace MovieCatalogService {
                 return ResourceManager.GetString("MovieSourceExceptionDefaultMessage", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data format mismatch from {0}..
+        /// </summary>
+        internal static string OmdbDataError {
+            get {
+                return ResourceManager.GetString("OmdbDataError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Could not connect movie source api on uri {0}..
+        /// </summary>
+        internal static string OmdbNetworkError {
+            get {
+                return ResourceManager.GetString("OmdbNetworkError", resourceCulture);
+            }
+        }
     }
 }

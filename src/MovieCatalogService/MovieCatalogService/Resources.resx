@@ -120,4 +120,10 @@
   <data name="MovieSourceExceptionDefaultMessage" xml:space="preserve">
     <value>An error occurred during a movie search expression.</value>
   </data>
+  <data name="OmdbDataError" xml:space="preserve">
+    <value>Data format mismatch from {0}.</value>
+  </data>
+  <data name="OmdbNetworkError" xml:space="preserve">
+    <value>Could not connect movie source api on uri {0}.</value>
+  </data>
 </root>

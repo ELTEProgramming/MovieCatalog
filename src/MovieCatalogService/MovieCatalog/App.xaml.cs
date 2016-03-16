@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MovieCatalog.ViewModel;
+using MovieCatalogService.OmdbSource;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +15,14 @@ namespace MovieCatalog
     /// </summary>
     public partial class App : Application
     {
+        private void ApplicationStartup(object sender, StartupEventArgs e)
+        {
+            this.MainWindow = new MainWindow
+            {
+                DataContext = new MovieCatalogViewModel(new OmdbMovieSource())
+            };
+
+            this.MainWindow.Show();
+        }
     }
 }
