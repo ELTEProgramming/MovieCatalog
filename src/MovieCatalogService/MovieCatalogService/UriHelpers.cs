@@ -11,11 +11,11 @@ namespace MovieCatalogService
 {
     public static class UriHelpers
     {
-        public static Uri AppendQueryArgument(this Uri baseUri, KeyValuePair<string, string> queryArgument)
+        public static Uri AppendQueryArgument(this Uri baseUri, string name, string value)
         {
             var uriBuilder = new UriBuilder(baseUri);
             var query = HttpUtility.ParseQueryString(uriBuilder.Query);
-            query[queryArgument.Key] = queryArgument.Value;
+            query[name] = value;
             uriBuilder.Query = query.ToString();
 
             return uriBuilder.Uri;

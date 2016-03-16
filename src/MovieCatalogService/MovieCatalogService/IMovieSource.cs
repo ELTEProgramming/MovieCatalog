@@ -9,5 +9,6 @@ namespace MovieCatalogService
     public interface IMovieSource
     {
         Movie GetMovieById(string id);
+        MovieSearchResult GetMovies(string title, int page = 1);
     }
 }

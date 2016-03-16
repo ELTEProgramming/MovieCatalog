@@ -1,4 +1,5 @@
 ﻿using MovieCatalogService;
+using MovieCatalogService.OmdbSource;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,10 +12,14 @@ namespace MovieCatalogConsole
     {
         static void Main(string[] args)
         {
+            var term = "supergirl";
             var source = new OmdbMovieSource();
-            var movie = source.GetMovieById("tt0371746");
+            MovieSearchResult movies;
 
-            Console.WriteLine("{0}: {1}", movie.Id, movie.Title);
+            for (movies = source.GetMovies(term, 1); movies.Movies.Any(); movies = source.GetMovies(term, movies.Page + 1))
+                foreach (var movie in movies.Movies)
+                    Console.WriteLine("{0}: {1}", movie.Id, movie.Title);
+
             Console.ReadKey(true);
         }
     }
