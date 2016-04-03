@@ -1,28 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿//-----------------------------------------------------------------------
+// <copyright file="mainwindow.xaml.cs" company="ELTE">
+//     Copyright (c) ELTE All rights reserved.
+// </copyright>
+// <author>kornel.katai</author>
+// <date>3/2/2016 4:55 PM</date>
+//-----------------------------------------------------------------------
 
 namespace MovieCatalog
 {
+    using MovieCatalog.ViewModel;
+    using System.Windows;
+
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for <see cref="MainWindow" />.
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        /// <summary>
+        /// Initializes a new instance of the <see cref="MainWindow"/> class.
+        /// </summary>
+        /// <param name="context">The context.</param>
+        public MainWindow(MovieCatalogViewModel context)
         {
-            InitializeComponent();
+            this.DataContext = context;
+            this.InitializeComponent();
         }
     }
 }
